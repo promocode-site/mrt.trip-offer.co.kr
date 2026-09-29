@@ -3,8 +3,15 @@
   "siteName": "마이리얼트립 할인쿠폰",
   "baseUrl": "https://mrt.trip-offer.co.kr",
   "postUrlPattern": "/blog/{slug}/",
-  "updated": "2026-09-26",
+  "updated": "2026-09-29",
   "posts": [
+    {
+      "title": "마이리얼트립 할인쿠폰 투어·티켓 할인코드 고르는 법",
+      "slug": "myrealtrip-tour-ticket-discount-code-guide",
+      "date": "2026-09-29",
+      "description": "마이리얼트립 투어·티켓 예약에 쓸 수 있는 할인코드 종류와 적용 방법, 코드 고를 때 놓치기 쉬운 부분을 정리했습니다.",
+      "image": ""
+    },
     {
       "title": "마이리얼트립 할인쿠폰 총정리! 항공권·숙소·투어 할인코드가 다 다릅니다",
       "slug": "myrealtrip-discount-coupon-code-guide",
