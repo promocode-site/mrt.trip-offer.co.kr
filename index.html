@@ -138,6 +138,11 @@ body{margin:0;background:#F3F1EA;color:#121212;font-family:-apple-system,BlinkMa
 .mrx-skip:focus{left:12px;top:12px;z-index:50;background:#fff;padding:8px 12px;border:2px solid #121212}
 .mrx-top{background:#121212;color:#F3F1EA;padding:40px 20px 0;word-break:keep-all}
 .mrx-top-in{max-width:1080px;margin:0 auto}
+.mrx-pages{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 0 22px;padding-bottom:2px}
+.mrx-pages::-webkit-scrollbar{display:none}
+.mrx-pages a{flex:0 0 auto;color:#F3F1EA;font-size:13.5px;font-weight:700;text-decoration:none;border:1.5px solid #6B6A65;border-radius:4px;padding:6px 12px;white-space:nowrap}
+.mrx-pages a:hover{border-color:#F3F1EA}
+.mrx-pages a[aria-current="page"]{border-color:#FF5A36;color:#FF5A36}
 .mrx-brand{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13px;font-weight:700;color:#9FB3CC}
 .mrx-brand span{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#FF5A36;border:1.5px solid #FF5A36;border-radius:3px;padding:1px 7px}
 .mrx-top h1{font-size:38px;line-height:1.25;font-weight:800;letter-spacing:-.03em;margin:12px 0 0}
@@ -175,6 +180,8 @@ main .mrk-head,main .mrc-head,main .mrp-head,main .mrh-head,main .mrn-head{borde
 .mrx-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 .mrx-foot li a{color:#E6E3DA;font-size:14px;text-decoration:none}
 .mrx-foot li a:hover{text-decoration:underline}
+.mrx-foot-links{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;margin-top:32px;padding-top:24px;border-top:1px solid #3A3A38}
+.mrx-foot-links ul{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:6px 16px}
 .mrx-foot-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-top:32px;padding-top:16px;border-top:1px solid #3A3A38;font-size:12.5px}
 .mrx-foot-bot a{color:#fff;font-weight:700;text-decoration:none;border:1.5px solid #6B6A65;border-radius:4px;padding:6px 12px}
 @media (max-width:900px){
@@ -197,6 +204,7 @@ main .mrk-head,main .mrc-head,main .mrp-head,main .mrh-head,main .mrn-head{borde
 .mrx-foot{padding:40px 16px 24px}
 .mrx-foot-grid{grid-template-columns:minmax(0,1fr)}
 .mrx-foot-grid>div:first-child{grid-column:auto}
+.mrx-foot-links{grid-template-columns:minmax(0,1fr)}
 }
 </style>
 </head>
@@ -205,6 +213,11 @@ main .mrk-head,main .mrc-head,main .mrp-head,main .mrh-head,main .mrn-head{borde
 <!-- ===== 헤더 ===== -->
 <header class="mrx-top" id="top">
 <div class="mrx-top-in">
+<nav class="mrx-pages" aria-label="페이지 메뉴">
+<a href="./" aria-current="page">홈</a>
+<a href="promo-code/">마이리얼트립 할인코드</a>
+<a href="promotion/">마이리얼트립 할인 일정</a>
+</nav>
 <p class="mrx-brand"><span>MRT</span>마이리얼트립 기획전 · 할인코드 · 카드 할인 쿠폰</p>
 <h1>마이리얼트립 할인쿠폰 모음</h1>
 <p class="mrx-top-lead">마이리얼트립 기획전 할인쿠폰, 할인코드, 카드·간편결제 할인을 한 페이지에 모았습니다. 할인마다 받는 곳과 결제 금액 구간을 계산해 두어, 예약할 상품과 금액에 맞는 할인을 바로 고를 수 있습니다.</p>
@@ -1718,7 +1731,7 @@ main .mrk-head,main .mrc-head,main .mrp-head,main .mrh-head,main .mrn-head{borde
 .upd-log-list li{display:flex;gap:14px;align-items:baseline;padding:11px 0;border-top:1px solid rgba(var(--upd-rgb),.14)}
 .upd-log-list li:first-child{border-top:0}
 .upd-log-list time{flex:0 0 auto;font:800 12.5px/1.6 ui-monospace,Menlo,Consolas,monospace;color:var(--upd-c)}
-.upd-log-list p{font-size:14px;line-height:1.6}
+.upd-log-list p{font-size:14px;line-height:1.6;overflow-wrap:anywhere}
 @media (max-width:640px){.upd-log-title{font-size:19px}.upd-log-list li{flex-direction:column;gap:2px}}
 </style>
 </main>
@@ -1740,6 +1753,30 @@ main .mrk-head,main .mrc-head,main .mrp-head,main .mrh-head,main .mrn-head{borde
 <li><a href="https://mrt.trip-offer.co.kr/blog/">마이리얼트립 할인 블로그</a></li>
 </ul></div>
 </div>
+<!--@FOOTER-LINKS-->
+<div class="mrx-foot-links">
+<div><p class="mrx-foot-h">카드사별 할인</p><ul>
+<li><a href="samsung-card/">삼성카드</a></li>
+<li><a href="lotte-card/">롯데카드</a></li>
+<li><a href="toss-pay/">토스페이</a></li>
+<li><a href="kakao-pay/">카카오페이</a></li>
+<li><a href="hyundai-card/">현대카드</a></li>
+<li><a href="bc-card/">BC카드</a></li>
+<li><a href="unionpay-card/">유니온페이</a></li>
+<li><a href="kb-card/">KB국민카드</a></li>
+<li><a href="woori-card/">우리카드</a></li>
+</ul></div>
+<div><p class="mrx-foot-h">다른 할인코드</p><ul>
+<li><a href="tripcom/">트립닷컴 할인코드</a></li>
+<li><a href="klook/">클룩 할인코드</a></li>
+<li><a href="agoda/">아고다 할인코드</a></li>
+<li><a href="hotelscom/">호텔스닷컴 할인코드</a></li>
+<li><a href="kkday/">kkday 할인코드</a></li>
+<li><a href="rakutentravel/">라쿠텐트래블 할인코드</a></li>
+<li><a href="usimsa/">유심사 할인쿠폰</a></li>
+</ul></div>
+</div>
+<!--@/FOOTER-LINKS-->
 <div class="mrx-foot-bot"><span>© 2026 마이리얼트립 할인쿠폰 모음</span><a href="#top">맨 위로</a></div>
 </div>
 </footer>
